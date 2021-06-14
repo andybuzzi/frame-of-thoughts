@@ -1,11 +1,11 @@
 const { Schema, model } = require("mongoose");
 
-const thoughtsSchema = new Schema({
+const thoughtSchema = new Schema({
   thoughtText: {
     type: String,
     required: "Text is Required",
     minLength: 1,
-    maxLength: 180,
+    maxLength: 280,
   },
 
   createdAt: {
@@ -19,7 +19,7 @@ const thoughtsSchema = new Schema({
 });
 
 // create the Pizza model using the PizzaSchema
-const Thoughts = model("Thoughts", thoughtsSchema);
+const Thought = model("Thought", thoughtSchema);
 
 // export the Pizza model
-module.exports = Thoughts;
+module.exports = Thought;
