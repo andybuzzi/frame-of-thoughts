@@ -9,12 +9,12 @@ const {
   removeReaction,
 } = require("../../controllers/thought-controller");
 
-// Set up GET all and POST at /api/pizzas
-// /api/users
+// Set up GET all and POST at /api/thoughts
+// /api/thoughts
 router.route("/").get(getAllThought);
 
-// Set up GET one and PUT at /api/pizzas/:id
-// /api/users/:id
+// Set up GET one and PUT at /api/thoughts/:id
+// /api/thoughts/:id
 router.route("/:id").get(getThoughtById).put(updateThought);
 
 // /api/thoughts/<userId>

@@ -14,7 +14,7 @@ const thoughtController = {
   getThoughtById({ params }, res) {
     Thought.findOne({ _id: params.id })
       .then((dbUserData) => {
-        // If no pizza is found, send 404
+        // If no thought is found, send 404
         if (!dbUserData) {
           res.status(404).json({ message: "No thought found with this id!" });
           return;
@@ -64,7 +64,7 @@ const thoughtController = {
       .catch((err) => res.json(err));
   },
 
-  // update pizza by id
+  // update thought by id
   updateThought({ params, body }, res) {
     Thought.findOneAndUpdate({ _id: params.id }, body, { new: true })
       .then((dbUserData) => {

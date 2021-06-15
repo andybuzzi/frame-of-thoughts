@@ -29,6 +29,7 @@ const userSchema = new Schema(
         ref: "Thought",
       },
     ],
+    friends: [this],
   },
   {
     toJSON: {
@@ -37,6 +38,11 @@ const userSchema = new Schema(
     id: false,
   }
 );
+
+// get total count of friends on retrieval
+userSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
 
 // create the Pizza model using the PizzaSchema
 const User = model("User", userSchema);
