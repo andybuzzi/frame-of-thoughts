@@ -68,6 +68,8 @@ const userController = {
       })
       .catch((err) => res.status(400).json(err));
   },
+
+  // Add friend
   addFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
@@ -88,6 +90,7 @@ const userController = {
       });
   },
 
+  // Remove friend
   removeFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
