@@ -4,7 +4,7 @@
 
 The social network api has been built for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. This application uses Express.js for routing, a MongoDB database, and the Mongoose ODM.
 
-Please [click here](https://murmuring-mountain-65060.herokuapp.com/) to be directed to a walkthrough video of the application.
+Please [click here](https://www.youtube.com/watch?v=Z93fdprTjbw) to be directed to a walkthrough video of the application.
 
 ## Usage
 
